@@ -1,11 +1,15 @@
 {
 	"name":"SpaceSunShine",
 	"author_name":"CatsArmy",
-    "version_number":"1.0.0",
+    "version_number":"1.0.2",
 	"website_url":"https://github.com/CatsArmy/SpaceSunShine",
 	"displayName":"SpaceSunShine",
 	"description":"This mod adds the light outside of the ship when in space for a nice view of the planet you are orbiting.",
 	"dependencies": [
 		"BepInEx-BepInExPack-5.4.2100"
-	]
+	],
+	"OptionalDependencies": 
+    [
+        "Wolf11221-SpaceShipDoor-1.0.1"
+    ]
 }
