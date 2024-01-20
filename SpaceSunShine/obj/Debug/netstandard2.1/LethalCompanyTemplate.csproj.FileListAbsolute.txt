@@ -1,0 +1,15 @@
+E:\Source\repos\GitHub\Forks & Clones\LCTemplate\LethalCompanyTemplate\bin\Debug\netstandard2.1\LethalCompanyTemplate.deps.json
+E:\Source\repos\GitHub\Forks & Clones\LCTemplate\LethalCompanyTemplate\bin\Debug\netstandard2.1\LethalCompanyTemplate.dll
+E:\Source\repos\GitHub\Forks & Clones\LCTemplate\LethalCompanyTemplate\bin\Debug\netstandard2.1\LethalCompanyTemplate.pdb
+E:\Source\repos\GitHub\Forks & Clones\LCTemplate\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.csproj.AssemblyReference.cache
+E:\Source\repos\GitHub\Forks & Clones\LCTemplate\LethalCompanyTemplate\obj\Debug\netstandard2.1\PluginInfo.cs
+E:\Source\repos\GitHub\Forks & Clones\LCTemplate\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.GeneratedMSBuildEditorConfig.editorconfig
+E:\Source\repos\GitHub\Forks & Clones\LCTemplate\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.AssemblyInfoInputs.cache
+E:\Source\repos\GitHub\Forks & Clones\LCTemplate\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.AssemblyInfo.cs
+E:\Source\repos\GitHub\Forks & Clones\LCTemplate\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.csproj.CoreCompileInputs.cache
+E:\Source\repos\GitHub\Forks & Clones\LCTemplate\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.sourcelink.json
+E:\Source\repos\GitHub\Forks & Clones\LCTemplate\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.dll
+E:\Source\repos\GitHub\Forks & Clones\LCTemplate\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.pdb
+E:\Source\repos\GitHub\Forks & Clones\LCTemplate\LethalCompanyTemplate\bin\Debug\netstandard2.1\LethalConfig.dll
+E:\Source\repos\GitHub\Forks & Clones\LCTemplate\LethalCompanyTemplate\bin\Debug\netstandard2.1\LethalConfig.pdb
+E:\Source\repos\GitHub\Forks & Clones\LCTemplate\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCo.F5A2ED72.Up2Date
