@@ -1,0 +1,12 @@
+{
+	"ManifestVersion": "2",
+	"name": "CorporateRestructureWeather",
+	"author_name": "CatsArmy",
+	"version_number": "1.0.0",
+	"website_url": "https://github.com/CatsArmy/SpaceSunShine/tree/main/SpaceSunShine/CorporateRestructureWeather",
+	"displayName": "CorporateRestructureWeather",
+	"description": "This mod adds color to the weather of the planet you are orbiting.",
+	"dependencies": [
+		"BepInEx-BepInExPack-5.4.2100"
+	]
+}
