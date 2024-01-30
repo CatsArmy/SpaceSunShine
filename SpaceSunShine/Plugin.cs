@@ -28,6 +28,7 @@ namespace SpaceSunShine
             GameObject Sun = Lighting.transform.Find(nameof(Sun)).gameObject;
             Light SunLight = Sun.GetComponent<Light>();
             SunLight.enabled = true;
+
         }
     }
 }

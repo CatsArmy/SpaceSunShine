@@ -10,6 +10,12 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Compile Remove="CorporateRestructureWeather\**" />
+      <EmbeddedResource Remove="CorporateRestructureWeather\**" />
+      <None Remove="CorporateRestructureWeather\**" />
+    </ItemGroup>
+
+    <ItemGroup>
         <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
         <PackageReference Include="BepInEx.Core" Version="5.*" />
         <PackageReference Include="BepInEx.PluginInfoProps" Version="1.*" />
@@ -18,5 +24,11 @@
 
     <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
         <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Assembly-CSharp">
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Assembly-CSharp.dll</HintPath>
+      </Reference>
     </ItemGroup>
 </Project>

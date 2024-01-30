@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34511.98
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpaceSunShine", "SpaceSunShine\SpaceSunShine.csproj", "{2DC60A9D-F44B-4B06-8A37-9B05D6D2CAC8}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorporateRestructureWeather", "SpaceSunShine\CorporateRestructureWeather\CorporateRestructureWeather.csproj", "{225E340E-7B51-4CF8-9DE5-62637F0C3747}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,10 +17,10 @@ Global
 		{2DC60A9D-F44B-4B06-8A37-9B05D6D2CAC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DC60A9D-F44B-4B06-8A37-9B05D6D2CAC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DC60A9D-F44B-4B06-8A37-9B05D6D2CAC8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5F0DD60C-0E4E-440E-ABFD-9FDB008986A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5F0DD60C-0E4E-440E-ABFD-9FDB008986A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5F0DD60C-0E4E-440E-ABFD-9FDB008986A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5F0DD60C-0E4E-440E-ABFD-9FDB008986A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{225E340E-7B51-4CF8-9DE5-62637F0C3747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{225E340E-7B51-4CF8-9DE5-62637F0C3747}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{225E340E-7B51-4CF8-9DE5-62637F0C3747}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{225E340E-7B51-4CF8-9DE5-62637F0C3747}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
