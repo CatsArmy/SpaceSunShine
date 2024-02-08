@@ -9,13 +9,14 @@ namespace SpaceSunShine
     public class Plugin : BaseUnityPlugin
     {
         private const string SpaceShipScene = "SampleSceneRelay";
-
         private void Awake()
         {
             // Plugin startup logic
             Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
             SceneManager.sceneLoaded += OnSceneLoaded;
+
         }
+
         private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
             if (scene.name != SpaceShipScene)
@@ -28,7 +29,7 @@ namespace SpaceSunShine
             GameObject Sun = Lighting.transform.Find(nameof(Sun)).gameObject;
             Light SunLight = Sun.GetComponent<Light>();
             SunLight.enabled = true;
-
+            SunLight.UseLethalExpansionLightSettings();
         }
     }
 }
