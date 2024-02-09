@@ -47,3 +47,6 @@ E:\Source\repos\GitHub\Forks & Clones\SpaceSunShine\SpaceSunShine\obj\Release\ne
 E:\Source\repos\GitHub\Forks & Clones\SpaceSunShine\SpaceSunShine\obj\Release\netstandard2.1\SpaceSun.EADC8EC1.Up2Date
 E:\Source\repos\GitHub\Forks & Clones\SpaceSunShine\SpaceSunShine\obj\Release\netstandard2.1\SpaceSunShine.dll
 E:\Source\repos\GitHub\Forks & Clones\SpaceSunShine\SpaceSunShine\obj\Release\netstandard2.1\SpaceSunShine.pdb
+E:\Source\repos\GitHub\Forks & Clones\SpaceSunShine\SpaceSunShine\bin\Release\netstandard2.1\Unity.RenderPipelines.Core.ShaderLibrary.dll
+E:\Source\repos\GitHub\Forks & Clones\SpaceSunShine\SpaceSunShine\bin\Release\netstandard2.1\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
+E:\Source\repos\GitHub\Forks & Clones\SpaceSunShine\SpaceSunShine\bin\Release\netstandard2.1\LethalSDK.dll
