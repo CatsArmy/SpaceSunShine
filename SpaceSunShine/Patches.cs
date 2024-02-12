@@ -17,7 +17,7 @@ namespace SpaceSunShine
         private static void OnShipLeave()
         {
             //Plugin.Instance.Sun.SetActive(true);
-            Plugin.TogglePointLight(Plugin.ConfigInstance.EnablePointLight);
+            Plugin.TogglePointLight(Plugin.Instance.EnablePointLight);
         }
     }
 }

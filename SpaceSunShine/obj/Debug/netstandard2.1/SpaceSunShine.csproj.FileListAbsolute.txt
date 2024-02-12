@@ -59,3 +59,7 @@ E:\Source\repos\GitHub\Forks & Clones\SpaceSunShine\SpaceSunShine\bin\Debug\nets
 E:\Source\repos\GitHub\Forks & Clones\SpaceSunShine\SpaceSunShine\bin\Debug\netstandard2.1\Newtonsoft.Json.dll
 E:\Source\repos\GitHub\Forks & Clones\SpaceSunShine\SpaceSunShine\bin\Debug\netstandard2.1\Unity.Profiling.Core.dll
 E:\Source\repos\GitHub\Forks & Clones\SpaceSunShine\SpaceSunShine\obj\Debug\netstandard2.1\SpaceSun.EADC8EC1.Up2Date
+E:\Source\repos\GitHub\Forks & Clones\SpaceSunShine\SpaceSunShine\bin\Debug\netstandard2.1\LethalConfig.dll
+E:\Source\repos\GitHub\Forks & Clones\SpaceSunShine\SpaceSunShine\bin\Debug\netstandard2.1\Unity.RenderPipelines.Core.ShaderLibrary.dll
+E:\Source\repos\GitHub\Forks & Clones\SpaceSunShine\SpaceSunShine\bin\Debug\netstandard2.1\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
+E:\Source\repos\GitHub\Forks & Clones\SpaceSunShine\SpaceSunShine\bin\Debug\netstandard2.1\LethalConfig.pdb
