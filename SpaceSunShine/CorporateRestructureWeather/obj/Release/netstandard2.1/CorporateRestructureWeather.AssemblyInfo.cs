@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("A template for Lethal Company")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e077de041e90e5647ebb67632dc7c4c7e5151132")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21f7b217aa746d7c2ba4d109eaf0521de4b4c6a5")]
 [assembly: System.Reflection.AssemblyProductAttribute("CorporateRestructureWeather")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CorporateRestructureWeather")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

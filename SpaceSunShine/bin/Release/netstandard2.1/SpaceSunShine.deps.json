@@ -14,7 +14,10 @@
           "BepInEx.PluginInfoProps": "1.1.0",
           "UnityEngine.Modules": "2022.3.9",
           "Assembly-CSharp": "0.0.0.0",
-          "LethalSDK": "1.0.0.0",
+          "ClientNetworkTransform": "0.0.0.0",
+          "Facepunch.Steamworks.Win64": "1.0.0.0",
+          "LethalConfig": "0.0.0.0",
+          "Unity.Netcode.Runtime": "0.0.0.0",
           "Unity.RenderPipelines.Core.Runtime": "0.0.0.0",
           "Unity.RenderPipelines.Core.ShaderLibrary": "0.0.0.0",
           "Unity.RenderPipelines.HighDefinition.Config.Runtime": "0.0.0.0",
@@ -367,11 +370,35 @@
           }
         }
       },
-      "LethalSDK/1.0.0.0": {
+      "ClientNetworkTransform/0.0.0.0": {
         "runtime": {
-          "LethalSDK.dll": {
+          "ClientNetworkTransform.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Facepunch.Steamworks.Win64/1.0.0.0": {
+        "runtime": {
+          "Facepunch.Steamworks.Win64.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "LethalConfig/0.0.0.0": {
+        "runtime": {
+          "LethalConfig.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Unity.Netcode.Runtime/0.0.0.0": {
+        "runtime": {
+          "Unity.Netcode.Runtime.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -415,14 +442,6 @@
           }
         }
       },
-      "Unity.Netcode.Runtime/0.0.0.0": {
-        "runtime": {
-          "Unity.Netcode.Runtime.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
       "Unity.Animation.Rigging/0.0.0.0": {
         "runtime": {
           "Unity.Animation.Rigging.dll": {
@@ -444,14 +463,6 @@
           "Unity.TextMeshPro.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "Facepunch.Steamworks.Win64/1.0.0.0": {
-        "runtime": {
-          "Facepunch.Steamworks.Win64.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -511,43 +522,11 @@
           }
         }
       },
-      "ClientNetworkTransform/0.0.0.0": {
+      "Newtonsoft.Json/13.0.0.0": {
         "runtime": {
-          "ClientNetworkTransform.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "Unity.Mathematics/1.0.0.0": {
-        "runtime": {
-          "Unity.Mathematics.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "Unity.Burst/0.0.0.0": {
-        "runtime": {
-          "Unity.Burst.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "Unity.VisualEffectGraph.Runtime/0.0.0.0": {
-        "runtime": {
-          "Unity.VisualEffectGraph.Runtime.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "UnityEngine.NVIDIAModule/0.0.0.0": {
-        "runtime": {
-          "UnityEngine.NVIDIAModule.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
+          "Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.2.0"
           }
         }
       },
@@ -583,9 +562,41 @@
           }
         }
       },
+      "Unity.Burst/0.0.0.0": {
+        "runtime": {
+          "Unity.Burst.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
       "Unity.Multiplayer.Tools.NetStatsReporting/0.0.0.0": {
         "runtime": {
           "Unity.Multiplayer.Tools.NetStatsReporting.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Unity.Mathematics/1.0.0.0": {
+        "runtime": {
+          "Unity.Mathematics.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Unity.VisualEffectGraph.Runtime/0.0.0.0": {
+        "runtime": {
+          "Unity.VisualEffectGraph.Runtime.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "UnityEngine.NVIDIAModule/0.0.0.0": {
+        "runtime": {
+          "UnityEngine.NVIDIAModule.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
           }
@@ -596,22 +607,6 @@
           "Unity.Collections.LowLevel.ILSupport.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "Unity.Burst.Unsafe/4.0.5.0": {
-        "runtime": {
-          "Unity.Burst.Unsafe.dll": {
-            "assemblyVersion": "4.0.5.0",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "Unity.Timeline/1.0.0.0": {
-        "runtime": {
-          "Unity.Timeline.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -631,11 +626,27 @@
           }
         }
       },
+      "Unity.Burst.Unsafe/4.0.5.0": {
+        "runtime": {
+          "Unity.Burst.Unsafe.dll": {
+            "assemblyVersion": "4.0.5.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
       "Unity.Multiplayer.Tools.NetworkProfiler.Runtime/0.0.0.0": {
         "runtime": {
           "Unity.Multiplayer.Tools.NetworkProfiler.Runtime.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Unity.Timeline/1.0.0.0": {
+        "runtime": {
+          "Unity.Timeline.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -652,14 +663,6 @@
           "Unity.Services.Core.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "Newtonsoft.Json/13.0.0.0": {
-        "runtime": {
-          "Newtonsoft.Json.dll": {
-            "assemblyVersion": "13.0.0.0",
-            "fileVersion": "13.0.2.0"
           }
         }
       },
@@ -950,7 +953,22 @@
       "serviceable": false,
       "sha512": ""
     },
-    "LethalSDK/1.0.0.0": {
+    "ClientNetworkTransform/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Facepunch.Steamworks.Win64/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LethalConfig/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Unity.Netcode.Runtime/0.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
@@ -980,11 +998,6 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Unity.Netcode.Runtime/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Unity.Animation.Rigging/0.0.0.0": {
       "type": "reference",
       "serviceable": false,
@@ -996,11 +1009,6 @@
       "sha512": ""
     },
     "Unity.TextMeshPro/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Facepunch.Steamworks.Win64/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
@@ -1040,27 +1048,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "ClientNetworkTransform/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Unity.Mathematics/1.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Unity.Burst/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Unity.VisualEffectGraph.Runtime/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "UnityEngine.NVIDIAModule/0.0.0.0": {
+    "Newtonsoft.Json/13.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
@@ -1085,22 +1073,32 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Unity.Burst/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Unity.Multiplayer.Tools.NetStatsReporting/0.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
+    "Unity.Mathematics/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Unity.VisualEffectGraph.Runtime/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityEngine.NVIDIAModule/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Unity.Collections.LowLevel.ILSupport/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Unity.Burst.Unsafe/4.0.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Unity.Timeline/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
@@ -1115,7 +1113,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Unity.Burst.Unsafe/4.0.5.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Unity.Multiplayer.Tools.NetworkProfiler.Runtime/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Unity.Timeline/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
@@ -1126,11 +1134,6 @@
       "sha512": ""
     },
     "Unity.Services.Core/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Newtonsoft.Json/13.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

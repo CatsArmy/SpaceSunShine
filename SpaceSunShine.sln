@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpaceSunShine", "SpaceSunSh
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorporateRestructureWeather", "SpaceSunShine\CorporateRestructureWeather\CorporateRestructureWeather.csproj", "{225E340E-7B51-4CF8-9DE5-62637F0C3747}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetterCrouch", "SpaceSunShine\BetterCrouch\BetterCrouch.csproj", "{5912D6A9-1587-4575-B3B3-6AD5700FF00E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{225E340E-7B51-4CF8-9DE5-62637F0C3747}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{225E340E-7B51-4CF8-9DE5-62637F0C3747}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{225E340E-7B51-4CF8-9DE5-62637F0C3747}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5912D6A9-1587-4575-B3B3-6AD5700FF00E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5912D6A9-1587-4575-B3B3-6AD5700FF00E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5912D6A9-1587-4575-B3B3-6AD5700FF00E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5912D6A9-1587-4575-B3B3-6AD5700FF00E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
