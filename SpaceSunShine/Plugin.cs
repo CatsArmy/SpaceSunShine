@@ -8,67 +8,42 @@ using UnityEngine.SceneManagement;
 
 namespace SpaceSunShine
 {
-    [BepInDependency("ainavt.lc.lethalconfig", BepInDependency.DependencyFlags.SoftDependency)]
+    //[BepInDependency("ainavt.lc.lethalconfig", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
     public class Plugin : BaseUnityPlugin
     {
         private const string SpaceShipScene = "SampleSceneRelay";
-        private const string LethalConfigName = "LethalConfig";
-        private const string PointLight = "Point Light(1)";
+        private const string _PointLight = "Point Light(1)";
         public static Plugin Instance { get; private set; }
         public static ManualLogSource Log = new ManualLogSource(PluginInfo.PLUGIN_NAME);
         public static AssetBundle mainAssetBundle;
-        private static Scene _scene;
 
         private void Awake()
         {
             // Plugin startup logic
             Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
             mainAssetBundle = AssetBundle.LoadFromFile(Assembly.GetExecutingAssembly().Location.Replace("SpaceSunShine.dll", "spacesunshine.lem"));
+            BindConfigs();
             SceneManager.sceneLoaded += OnSceneLoaded;
             //Potentialy move ladder out its container to allow use while ship is in space
         }
-        private void Start()
+        private void BindConfigs()
         {
-            string key = Key();
-            string UPP_PrefKey = $"{key}-UPP";
-            string UOS_PrefKey = $"{key}-UOS";
-            string EPL_PrefKey = $"{key}-EPL";
-            this.UsePlayerPrefs = GetBool(UPP_PrefKey);
-            UPP = Config.Bind<bool>(UPP_Definition, this.UsePlayerPrefs, UPP_Description);
-            this.UsePlayerPrefs = UPP.Value;
             UOS = Config.Bind<bool>(UOS_Definition, false, UOS_Description);
-            UPP = Config.Bind<bool>(EPL_Definition, true, EPL_Description);
-            if (!UsePlayerPrefs)
-            {
-                this.UseOldSun = GetBool(UOS_PrefKey, false);
-                this.EnablePointLight = GetBool(EPL_PrefKey);
-            }
-            else
-            {
-                this.UseOldSun = UOS.Value;
-                this.EnablePointLight = EPL.Value;
-            }
-            Log.LogInfo($"{nameof(UseOldSun)}{UseOldSun}");
-            Log.LogInfo($"{nameof(EnablePointLight)}{EnablePointLight}");
-            Log.LogInfo($"{nameof(UsePlayerPrefs)}{UsePlayerPrefs}");
+            EPL = Config.Bind<bool>(EPL_Definition, true, EPL_Description);
+            this.UseOldSun = UOS.Value;
+            this.EnablePointLight = EPL.Value;
+
+            Log.LogInfo($"{nameof(UseOldSun)} {UseOldSun}");
+            Log.LogInfo($"{nameof(EnablePointLight)} {EnablePointLight}");
         }
-        public static string Key()
-        {
-            return $"{PluginInfo.PLUGIN_NAME}-";
-        }
+
         public static void Update()
         {
-            if (_scene.name != SpaceShipScene)
-            {
-                return;
-            }
-            GameObject[] SceneObjects = _scene.GetRootGameObjects();
-            GameObject Environment = SceneObjects.FirstOrDefault(name => name.name == nameof(Environment));
-            GameObject HangerShip = Environment.transform.Find(nameof(HangerShip)).gameObject;
-            GameObject ShipModels2b = HangerShip.transform.Find(nameof(ShipModels2b)).gameObject;
-            GameObject ShipLightsPost = ShipModels2b.transform.Find(nameof(ShipLightsPost)).gameObject;
-            GameObject LightPostClone = Instantiate(ShipLightsPost, ShipModels2b.transform);
+
+
+
+
             ShipLightsPost.SetActive(true);
             //Plan:
             //Clone FloodLight insted of point light as done ^^^
@@ -82,22 +57,42 @@ namespace SpaceSunShine
             //Thunderstore push
         }
 
+        private static Light PointLight = null;
+        private static GameObject ZeekerSun = null;
+        private static GameObject Sun = null;
+        private static GameObject HangerShip = null;
+        private static GameObject ShipModels2b = null;
+        private static GameObject OutsideShipRoom = null;
+        private static GameObject Ladder = null;
+        private static GameObject ShipLightsPost = null;
+        private static GameObject ShipLightsPostClone = null;
         private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
-            _scene = scene;
             if (scene.name != SpaceShipScene)
             {
+                PointLight = null;
+                ZeekerSun = null;
+                Sun = null;
+                HangerShip = null;
+                ShipModels2b = null;
+                OutsideShipRoom = null;
+                Ladder = null;
+                ShipLightsPost = null;
+                ShipLightsPostClone = null;
                 return;
             }
             GameObject[] SceneObjects = scene.GetRootGameObjects();
             GameObject Environment = SceneObjects.FirstOrDefault(name => name.name == nameof(Environment));
             GameObject Lighting = Environment.transform.Find(nameof(Lighting)).gameObject;
-            GameObject Sun;
-            GameObject ZeekerSun = Lighting.transform.Find(nameof(Sun)).gameObject;
-            if (EnablePointLight)
-            {
-                TogglePointLight(true);
-            }
+            ZeekerSun = Lighting.transform.Find(nameof(Sun)).gameObject;
+            PointLight = Lighting.transform.Find(_PointLight).gameObject.GetComponent<Light>();
+            HangerShip = Environment.transform.Find(nameof(HangerShip)).gameObject;
+            TogglePointLight(EnablePointLight);b
+            InitSun();
+            InitFloodLights();
+        }
+        private void InitSun()
+        {
             if (UseOldSun)
             {
                 Light SunLight = ZeekerSun.GetComponent<Light>();
@@ -118,6 +113,13 @@ namespace SpaceSunShine
             ZeekerSun.transform.localRotation = rotation;
             Sun.transform.SetParent(ZeekerSun.transform, true);
         }
+        private void InitFloodLights()
+        {
+            ShipModels2b = HangerShip.transform.Find(nameof(ShipModels2b)).gameObject;
+            ShipLightsPost = ShipModels2b.transform.Find(nameof(ShipLightsPost)).gameObject;
+            ShipLightsPostClone = Instantiate(ShipLightsPost, ShipModels2b.transform);
+            ShipLightsPostClone.transform.position = ShipLightsPost.transform.position;
+        }
         public static Quaternion Copy(Quaternion rot)
         {
             return new Quaternion(rot.x, rot.y, rot.z, rot.w);
@@ -128,18 +130,7 @@ namespace SpaceSunShine
         }
         public static void TogglePointLight(bool value)
         {
-            if (_scene.name != SpaceShipScene)
-            {
-                return;
-            }
-            GameObject[] SceneObjects = _scene.GetRootGameObjects();
-            GameObject Environment = SceneObjects.FirstOrDefault(name => name.name == nameof(Environment));
-            if (Environment == null)
-            {
-                return;
-            }
-            GameObject Lighting = Environment.transform.Find(nameof(Lighting)).gameObject;
-            Lighting.transform.Find(PointLight).GetComponent<Light>().enabled = value;
+            PointLight.enabled = false;
         }
         public bool GetBool(string key, bool defualt = true)
         {
@@ -172,5 +163,4 @@ namespace SpaceSunShine
         ConfigDescription EPL_Description = new ConfigDescription("This settings lets you choose if " +
             "you want to enable the point light for a lil more light on the dark side of the ship");
     }
-
 }

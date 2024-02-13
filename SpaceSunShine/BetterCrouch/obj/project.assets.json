@@ -2684,24 +2684,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bergm\\.nuget\\packages\\": {},
-    "E:\\Visual Studio\\SDKs Components Tools\\Shared\\NuGetPackages": {}
+    "C:\\Users\\bergm_69gfgdx\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Source\\repos\\GitHub\\Forks & Clones\\SpaceSunShine\\SpaceSunShine\\BetterCrouch\\BetterCrouch.csproj",
+      "projectUniqueName": "D:\\source\\CatsArmy\\SpaceSunShine\\SpaceSunShine\\BetterCrouch\\BetterCrouch.csproj",
       "projectName": "BetterCrouch",
-      "projectPath": "E:\\Source\\repos\\GitHub\\Forks & Clones\\SpaceSunShine\\SpaceSunShine\\BetterCrouch\\BetterCrouch.csproj",
-      "packagesPath": "C:\\Users\\bergm\\.nuget\\packages\\",
-      "outputPath": "E:\\Source\\repos\\GitHub\\Forks & Clones\\SpaceSunShine\\SpaceSunShine\\BetterCrouch\\obj\\",
+      "projectPath": "D:\\source\\CatsArmy\\SpaceSunShine\\SpaceSunShine\\BetterCrouch\\BetterCrouch.csproj",
+      "packagesPath": "C:\\Users\\bergm_69gfgdx\\.nuget\\packages\\",
+      "outputPath": "D:\\source\\CatsArmy\\SpaceSunShine\\SpaceSunShine\\BetterCrouch\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "E:\\Visual Studio\\SDKs Components Tools\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "E:\\Source\\repos\\GitHub\\Forks & Clones\\SpaceSunShine\\NuGet.Config",
-        "C:\\Users\\bergm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "D:\\source\\CatsArmy\\SpaceSunShine\\NuGet.Config",
+        "C:\\Users\\bergm_69gfgdx\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

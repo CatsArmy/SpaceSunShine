@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("A template for Lethal Company")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+827500db8e2bd94237e092bdad8ddb3457aa5cf4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7738172cca2dbed194b05a0cea71869a8cda199")]
 [assembly: System.Reflection.AssemblyProductAttribute("BetterCrouch")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BetterCrouch")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

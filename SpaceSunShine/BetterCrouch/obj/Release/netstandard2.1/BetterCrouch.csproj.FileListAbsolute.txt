@@ -51,3 +51,56 @@ E:\Source\repos\GitHub\Forks & Clones\SpaceSunShine\SpaceSunShine\BetterCrouch\o
 E:\Source\repos\GitHub\Forks & Clones\SpaceSunShine\SpaceSunShine\BetterCrouch\obj\Release\netstandard2.1\BetterCr.5DBB2E14.Up2Date
 E:\Source\repos\GitHub\Forks & Clones\SpaceSunShine\SpaceSunShine\BetterCrouch\obj\Release\netstandard2.1\BetterCrouch.dll
 E:\Source\repos\GitHub\Forks & Clones\SpaceSunShine\SpaceSunShine\BetterCrouch\obj\Release\netstandard2.1\BetterCrouch.pdb
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\BetterCrouch.deps.json
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\BetterCrouch.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\BetterCrouch.pdb
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Assembly-CSharp.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\ClientNetworkTransform.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Facepunch.Steamworks.Win64.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\LethalConfig.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.InputSystem.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.Netcode.Runtime.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.RenderPipelines.Core.Runtime.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.RenderPipelines.Core.ShaderLibrary.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.RenderPipelines.HighDefinition.Config.Runtime.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.RenderPipelines.HighDefinition.Runtime.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.Animation.Rigging.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\UnityEngine.UI.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.TextMeshPro.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\DissonanceVoip.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Assembly-CSharp-firstpass.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Facepunch Transport for Netcode for GameObjects.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.Netcode.Components.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.AI.Navigation.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.Collections.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Newtonsoft.Json.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.Multiplayer.Tools.NetStats.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.Multiplayer.Tools.MetricTypes.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.Multiplayer.Tools.NetworkSolutionInterface.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.Networking.Transport.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.Burst.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.Multiplayer.Tools.NetStatsReporting.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.Mathematics.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.VisualEffectGraph.Runtime.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\UnityEngine.NVIDIAModule.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.Collections.LowLevel.ILSupport.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.Multiplayer.Tools.Common.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.Services.Relay.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.Burst.Unsafe.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.Multiplayer.Tools.NetworkProfiler.Runtime.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.Timeline.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.Services.Core.Internal.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.Services.Core.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Unity.Profiling.Core.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\LethalConfig.pdb
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\obj\Release\netstandard2.1\BetterCrouch.csproj.AssemblyReference.cache
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\obj\Release\netstandard2.1\PluginInfo.cs
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\obj\Release\netstandard2.1\BetterCrouch.GeneratedMSBuildEditorConfig.editorconfig
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\obj\Release\netstandard2.1\BetterCrouch.AssemblyInfoInputs.cache
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\obj\Release\netstandard2.1\BetterCrouch.AssemblyInfo.cs
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\obj\Release\netstandard2.1\BetterCrouch.csproj.CoreCompileInputs.cache
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\obj\Release\netstandard2.1\BetterCrouch.sourcelink.json
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\obj\Release\netstandard2.1\BetterCr.5DBB2E14.Up2Date
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\obj\Release\netstandard2.1\BetterCrouch.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\obj\Release\netstandard2.1\BetterCrouch.pdb
