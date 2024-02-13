@@ -7,17 +7,35 @@ namespace SpaceSunShine
         [HarmonyPatch(typeof(StartOfRound), nameof(StartOfRound.StartGame))]
         private static void OnShipStartLand(StartOfRound __instance)
         {
-            //Plugin.Instance.Sun.SetActive(false);
-            Plugin.TogglePointLight(false);
-            //RoundManager.Instance.playersManager.shipDoorsAnimator.SetBool("Closed", value: true);
-            //UnityEngine.GameObject.FindObjectOfType<HangarShipDoor>().SetDoorButtonsEnabled(doorButtonsEnabled: false);
+            if (Plugin.ShipLightsPostClone != null)
+            {
+                Plugin.ShipLightsPostClone.SetActive(false);
+            }
+            if (Plugin.Sun != null)
+            {
+                Plugin.Sun.SetActive(false);
+            }
+            if (Plugin.OutsideShipRoomClone != null)
+            {
+                Plugin.OutsideShipRoomClone.SetActive(false);
+            }
         }
         [HarmonyPostfix]
         [HarmonyPatch(typeof(StartOfRound), nameof(StartOfRound.EndGameServerRpc))]
         private static void OnShipLeave()
         {
-            //Plugin.Instance.Sun.SetActive(true);
-            Plugin.TogglePointLight(Plugin.Instance.EnablePointLight);
+            if (Plugin.ShipLightsPostClone != null)
+            {
+                Plugin.ShipLightsPostClone.SetActive(Plugin.EFL.Value);
+            }
+            if (Plugin.Sun != null)
+            {
+                Plugin.Sun.SetActive(Plugin.UOS.Value);
+            }
+            if (Plugin.OutsideShipRoomClone != null)
+            {
+                Plugin.OutsideShipRoomClone.SetActive(Plugin.SL.Value);
+            }
         }
     }
 }

@@ -1,7 +1,4 @@
-﻿using System.Linq;
-using BepInEx;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using BepInEx;
 using HarmonyLib;
 
 namespace CorporateRestructureWeather
@@ -20,7 +17,7 @@ namespace CorporateRestructureWeather
             }
             Plugin.Instance = this;
             Plugin.Instance._harmony.PatchAll(typeof(WeatherPatch));
-            
+
             Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
 
         }
