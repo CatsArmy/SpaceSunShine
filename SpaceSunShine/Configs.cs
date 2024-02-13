@@ -1,144 +1,33 @@
-﻿namespace SpaceSunShine
+﻿using BepInEx.Configuration;
+
+namespace SpaceSunShine
 {
-    //public class Configs
-    //{
-
-
-    //    public static ConfigFile configs;
-    //    private static Configs Instance = null;
-    //    private static Configs _Instance;
-    //    public static Configs InitConfigs(ulong steamid)
-    //    {
-    //        return _Instance.Init(steamid);
-    //    }
-    //    private Configs Init(ulong steamid)
-    //    {
-    //        if (Instance != null)
-    //        {
-    //            return Instance;
-    //        }
-    //        //configs = Plugin.Instance.Config;
-    //        //hasSteamid = SetSteamID(steamid);
-
-    //        Instance = this;
-    //        return Instance;
-    //    }
-
-
-    //}
-    /*internal static class Configs
+    public class Configs
     {
-        private static ConfigFile Config = Plugin.Instance.Config;
-        private static string key = "SpaceSunShine-";
-        public static bool UseOldSunShineMethod { get; private set; } = true;
-        public static bool DefaultSavingType { get; private set; } = true;
-        public static bool EnablePointLight { get; private set; } = true;
+        public static ConfigEntry<bool> UOS;
+        public static ConfigEntry<bool> EFL;
+        public static ConfigEntry<bool> SL;
 
-        private const string _LethalConfig = "LethalConfig";
-        public static bool LethalConfigEnabled = false;
-        private static ConfigEntry<bool> UOSSM;
-        private static void _UOSSM()
+        public Configs(ConfigFile config)
         {
-            string UseOldSunShineMethodKey = $"{key}OldSun";
-            ConfigDefinition UOSSM_Definition = new ConfigDefinition("Sun Shine Method", "Use Old Sun Shine Method");
-            UOSSM = Config.Bind<bool>(UOSSM_Definition, false);
-            if (!DefaultSavingType)
-            {
-                UseOldSunShineMethod = UOSSM.Value;
-                return;
-            }
-            if (!PlayerPrefs.HasKey(UseOldSunShineMethodKey))
-            {
-                SetBool(UseOldSunShineMethodKey, false);
-            }
-            UseOldSunShineMethod = GetBool(UseOldSunShineMethodKey, false);
+            const string UOS_Key = "Use old sun lighting method";
+            const string SL_Key = "Enable ladder in space";
+            const string EFL_Key = "Enable flood light";
+            ConfigDefinition UOS_Definition = new ConfigDefinition("Lighting", UOS_Key);
+            ConfigDefinition EFL_Definition = new ConfigDefinition("Lighting", EFL_Key);
+            ConfigDefinition SL_Definition = new ConfigDefinition("Space stuff", SL_Key);
 
-        }
-        private static ConfigEntry<bool> EPL;
-        private static void _EPL()
-        {
-            string EnablePointlightKey = $"{key}EnablePointlight";
-            ConfigDefinition EPL_Definition = new ConfigDefinition("Enables the point light", EnablePointlightKey);
-            EPL = Config.Bind<bool>(EPL_Definition, true);
-            if (!DefaultSavingType)
-            {
-                EnablePointLight = EPL.Value;
-                return;
-            }
-            if (!PlayerPrefs.HasKey(EnablePointlightKey))
-            {
-                SetBool(EnablePointlightKey, true);
-            }
-            EnablePointLight = GetBool(EnablePointlightKey, true);
-        }
-        public static void InitConfigs(ulong? steamid)
-        {
-            if (steamid.HasValue)
-            {
-                key = $"SpaceSunShine{steamid}-";
-            }
-            InitConfigs();
-            _UOSSM();
-            _EPL();
-        }
-        private static ConfigEntry<bool> DST;
-        private static void InitConfigs()
-        {
-            string DefaultSavingTypeKey = $"{key}Save";
-            ConfigDefinition DST_Definition = new ConfigDefinition("Defualt saving method", nameof(DefaultSavingType));
-            ConfigDescription DST_Description = new ConfigDescription(@"The defualt saving type method for saving the configuration of the mod
-            true means that saves are saved across profiles
-            false means that saves are saved on your profile
-            to override the defualt value use LethalConfig");
-            DST = Config.Bind<bool>(DST_Definition, true, DST_Description);
+            ConfigDescription UOS_Description = new ConfigDescription("Choose if " +
+                "you want to use the old method for generating the light of the sun or the newer one thats like LE");
+            ConfigDescription EFL_Description = new ConfigDescription("Choose if " +
+                "you want to enable the flood light for a lil more light on the dark side of the ship");
 
-            if (!PlayerPrefs.HasKey(DefaultSavingTypeKey))
-            {
-                SetBool(DefaultSavingTypeKey, true);
-            }
-            if (GetBool(DefaultSavingTypeKey))
-            {
-                DefaultSavingType = true;
-            }
-            else
-            {
-                DefaultSavingType = DST.Value;
-            }
-
-            LethalConfigEnabled = IsLethalConfigInstalled();
-            if (!LethalConfigEnabled)
-            {
-                return;
-            }
-
-            GenericButtonConfigItem Disable = new GenericButtonConfigItem("Defualt saving method", "Disable local saving",
-                "Saves are saved on your profile", "Disable", () => SetBool(DefaultSavingTypeKey, false));
-            GenericButtonConfigItem Enable = new GenericButtonConfigItem("Defualt saving method", "Enable local saving",
-                "Saves are saved across profiles", "Enable", () => SetBool(DefaultSavingTypeKey, true));
+            ConfigDescription SL_Description = new ConfigDescription("Choose if " +
+                    "you want to enable the ladder while in space\n" +
+                    "May conflict with mods untested i am only enabling it when needed to mitigate it effecting other mods if it does");
+            UOS = config.Bind<bool>(UOS_Definition, false, UOS_Description);
+            EFL = config.Bind<bool>(EFL_Definition, true, EFL_Description);
+            SL = config.Bind<bool>(SL_Definition, true, SL_Description);
         }
-        public static bool IsLethalConfigInstalled()
-        {
-            foreach (BepInEx.PluginInfo mod in BepInEx.Bootstrap.Chainloader.PluginInfos.Values)
-            {
-                if (mod.Metadata.Name == _LethalConfig)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        public static void SetBool(string key, bool value)
-        {
-            PlayerPrefs.SetInt(key, value ? 1 : 0);
-        }
-        public static bool GetBool(string key, bool defualt = true)
-        {
-            return PlayerPrefs.GetInt(key, GetInt(defualt)) == 1;
-        }
-        public static int GetInt(bool value)
-        {
-            return value ? 1 : 0;
-        }
-    }*/
+    }
 }

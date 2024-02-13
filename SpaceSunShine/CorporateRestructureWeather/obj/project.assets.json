@@ -2684,8 +2684,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bergm_69gfgdx\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\bergm\\.nuget\\packages\\": {},
+    "E:\\Visual Studio\\SDKs Components Tools\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
@@ -2693,15 +2693,15 @@
       "projectUniqueName": "D:\\source\\CatsArmy\\SpaceSunShine\\SpaceSunShine\\CorporateRestructureWeather\\CorporateRestructureWeather.csproj",
       "projectName": "CorporateRestructureWeather",
       "projectPath": "D:\\source\\CatsArmy\\SpaceSunShine\\SpaceSunShine\\CorporateRestructureWeather\\CorporateRestructureWeather.csproj",
-      "packagesPath": "C:\\Users\\bergm_69gfgdx\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\bergm\\.nuget\\packages\\",
       "outputPath": "D:\\source\\CatsArmy\\SpaceSunShine\\SpaceSunShine\\CorporateRestructureWeather\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "E:\\Visual Studio\\SDKs Components Tools\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "D:\\source\\CatsArmy\\SpaceSunShine\\NuGet.Config",
-        "C:\\Users\\bergm_69gfgdx\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bergm\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

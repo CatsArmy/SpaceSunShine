@@ -10,15 +10,15 @@
         "projectUniqueName": "D:\\source\\CatsArmy\\SpaceSunShine\\SpaceSunShine\\BetterCrouch\\BetterCrouch.csproj",
         "projectName": "BetterCrouch",
         "projectPath": "D:\\source\\CatsArmy\\SpaceSunShine\\SpaceSunShine\\BetterCrouch\\BetterCrouch.csproj",
-        "packagesPath": "C:\\Users\\bergm_69gfgdx\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\bergm\\.nuget\\packages\\",
         "outputPath": "D:\\source\\CatsArmy\\SpaceSunShine\\SpaceSunShine\\BetterCrouch\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "E:\\Visual Studio\\SDKs Components Tools\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "D:\\source\\CatsArmy\\SpaceSunShine\\NuGet.Config",
-          "C:\\Users\\bergm_69gfgdx\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bergm\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
