@@ -67,3 +67,10 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+/SpaceSunShine/BetterCrouch/obj/Release/netstandard2.1/BetterCrouch.AssemblyInfo.cs
+/SpaceSunShine/BetterCrouch/obj/Release/netstandard2.1/BetterCrouch.AssemblyInfoInputs.cache
+/SpaceSunShine/CorporateRestructureWeather/obj/Release/netstandard2.1/CorporateRestructureWeather.AssemblyInfo.cs
+/SpaceSunShine/CorporateRestructureWeather/obj/Release/netstandard2.1/CorporateRestructureWeather.AssemblyInfoInputs.cache
+/SpaceSunShine/obj/Release/netstandard2.1/SpaceSunShine.AssemblyInfo.cs
+/SpaceSunShine/obj/Release/netstandard2.1/SpaceSunShine.AssemblyInfoInputs.cache
+/SpaceSunShine/obj/Release/netstandard2.1/SpaceSunShine.csproj.AssemblyReference.cache
