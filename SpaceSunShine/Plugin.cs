@@ -17,6 +17,5 @@ namespace SpaceSunShine
             Configs = new Configs(base.Config);
             SceneManager.sceneLoaded += SpaceSunShine.OnSceneLoaded;
         }
-        //Thunderstore push:no fuck u
     }
 }
