@@ -1,10 +1,10 @@
 {
 	"name": "SpaceSunShine",
 	"author_name": "CatsArmy",
-	"version_number": "1.0.4",
 	"website_url": "https://github.com/CatsArmy/SpaceSunShine",
 	"displayName": "SpaceSunShine",
-	"description": "This mod adds the light outside of the ship when in space for a nice view of the planet you are orbiting.",
+	"version_number": "1.2.0",
+	"description": "This mod adds the light outside of the ship when in space for a nice view of the planet you are orbiting. adds back the floodlight and ladder to space.",
 	"dependencies": [
 		"BepInEx-BepInExPack-5.4.2100"
 	]
