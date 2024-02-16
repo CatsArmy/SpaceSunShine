@@ -1,148 +1,122 @@
-﻿using System.Collections.Generic;
-using System.Reflection;
-using System.Reflection.Emit;
+﻿using System.Collections;
+using BepInEx.Logging;
 using GameNetcodeStuff;
 using HarmonyLib;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 namespace BetterCrouch
 {
-    internal static class Patches
+    internal class Patches
     {
-        private static PlayerControllerB __mainPlayer;
         public static bool crouchOnHitGround = false;
-        public static bool Initialized = false;
-        private const float maxDistance = 0.72f;
-        public static bool InstaJump = true;
+
+        public static bool HitGround = false;
+        public static bool IsJumping = false;
+        private static ManualLogSource Logger = Plugin.Log;
+        private static Coroutine coroutine;
         private const string Crouch = nameof(Crouch);
+        private const string Jump = nameof(Jump);
         private const string Update = nameof(Update);
         private const string Jump_performed = nameof(Jump_performed);
-
-        [HarmonyPostfix]
-        [HarmonyPatch(typeof(PlayerControllerB), Update)]
-        public static void ReadInput(PlayerControllerB __instance, RaycastHit ___hit)
+        private static IEnumerator PerformDelayedAction(PlayerControllerB __instance, RaycastHit ___hit)
         {
-            if (!Initialized)
+            var Jump = GetJump();
+            if (Jump.IsPressed())//performed == on button up
             {
-                return;
+                Logger.LogError("case1");
+                IsJumping = true;
+                if (__instance.isCrouching && __instance.CanJump(___hit))
+                {
+                    __instance.Crouch(false);
+                    crouchOnHitGround = true;
+                    Logger.LogError("type(a)");
+                }
+            }
+            else
+            {
+                yield return null;
+                __instance.Crouch(false);
+                Logger.LogError("case2");
             }
 
-            if (__mainPlayer == null)
-            {
-                __mainPlayer = StartOfRound.Instance.localPlayerController;
-            }
-            PlayerControllerB localPlayerController = GameNetworkManager.Instance.localPlayerController;
-            // Testing conditions where the player crouch state cannot be changed
-            if ((!__instance.IsOwner || !__instance.isPlayerControlled || (__instance.IsServer && !__instance.isHostPlayerObject))
-                && !__instance.isTestingPlayer && ValidatePlayerState())
-            {
-                InputAction CrouchAction = GetCrouch();
-                if (CrouchAction == null)
-                {
-                    return;
-                }
-                // The player is no longer holding the crouch button OR the player was forced to uncrouch
-                // Other players see that this player is not crouching
-                // Player is in a space where they cannot jump/must crouch
-                if (!localPlayerController.playerBodyAnimator.GetBool("crouching"))
-                {
-                    return;
-                }
-                if (!CrouchAction.IsPressed() && localPlayerController.CanJump())
-                {
-                    localPlayerController.isCrouching = false;
-                    localPlayerController.playerBodyAnimator.SetBool("crouching", false);
-                }
-            }
+            coroutine = null;
         }
-
         [HarmonyPrefix]
         [HarmonyPatch(typeof(PlayerControllerB), Jump_performed)]
-        public static void Prefix_PreformedJump(PlayerControllerB __instance, RaycastHit ___hit)
+        public static void Prefix_PreformedJump(PlayerControllerB __instance,// ref InputAction.CallbackContext context,
+            RaycastHit ___hit)
         {
-            if (__instance.isCrouching && __instance.CanJump(___hit))
-            {
-                __instance.isCrouching = false;
-                crouchOnHitGround = true;
-            }
+            Logger.LogError("Begin routine");
+            coroutine = __instance.StartCoroutine(PerformDelayedAction(__instance, ___hit));
         }
 
         [HarmonyPostfix]
         [HarmonyPatch(typeof(PlayerControllerB), Jump_performed)]
         public static void Postfix_PreformedJump(PlayerControllerB __instance)
         {
-            if (crouchOnHitGround)
-            {
-                __instance.isCrouching = true;
-                crouchOnHitGround = false;
-            }
-        }
-
-        [HarmonyPostfix]
-        [HarmonyPatch(typeof(PlayerControllerB), nameof(PlayerHitGroundEffects))]
-        public static void PlayerHitGroundEffects(PlayerControllerB __instance)
-        {
-            if (__instance.isCrouching)
-            {
-                __instance.playerBodyAnimator.SetTrigger("startCrouching");
-                __instance.playerBodyAnimator.SetBool("crouching", true);
-            }
+            Logger.LogError("case3");
+            //if (crouchOnHitGround)
+            //{
+            //    crouchOnHitGround = false;
+            //    IsJumping = false;
+            //    __instance.Crouch(true);
+            //}
         }
 
         [HarmonyPrefix]
-        [HarmonyPatch(typeof(PlayerControllerB), nameof(Crouch_performed))]
-        public static void Crouch_performed()
+        [HarmonyPatch(typeof(PlayerControllerB), nameof(PlayerHitGroundEffects))]
+        public static void PlayerHitGroundEffects(PlayerControllerB __instance)
         {
-        }
-        [HarmonyTranspiler]
-        [HarmonyPatch(typeof(PlayerControllerB), Update)]
-        public static IEnumerable<CodeInstruction> RemoveJumpDelay(IEnumerable<CodeInstruction> instructions)
-        {
-            if (!InstaJump)
+            Logger.LogFatal("am i patching");
+            InputAction Jump = GetJump();
+            IsJumping = false;
+            if (crouchOnHitGround)
             {
-                return instructions;
-            }
-
-            List<CodeInstruction> list = new(instructions);
-            for (int i = 0; i < list.Count; i++)
-            {
-                CodeInstruction val = list[i];
-                if (val.opcode != OpCodes.Newobj)
+                if (!Jump.IsPressed() && !__instance.isCrouching)
                 {
-                    continue;
-                }
-
-                ConstructorInfo? constructorInfo = val.operand as ConstructorInfo;
-                if (constructorInfo?.DeclaringType == typeof(WaitForSeconds))
-                {
-                    list[i] = new CodeInstruction(OpCodes.Ldnull, null);
-                    list.RemoveAt(i - 1);
-                    i--;
-
-                    Plugin.Log.LogDebug("Patched Instant-Jump");
+                    __instance.Crouch(true);
                 }
             }
-
-            return list;
+            //__instance.StopCoroutine(coroutine);
+            //coroutine = null;
         }
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(PlayerControllerB), "Crouch_performed")]
+        private static void Crouch_performed(PlayerControllerB __instance)
+        {
+            var Crouch = GetCrouch();
+            if (!Crouch.IsPressed() && !__instance.quickMenuManager.isMenuOpen &&
+                ((__instance.IsOwner && __instance.isPlayerControlled
+                && (!__instance.IsServer || __instance.isHostPlayerObject)) || __instance.isTestingPlayer)
+                && !__instance.inSpecialInteractAnimation && __instance.thisController.isGrounded
+                && !__instance.isTypingChat && IsJumping)
+            {
+                __instance.Crouch(!__instance.isCrouching);
+            }
+        }
+
+
+
+        public static InputAction GetJump()
+        {
+            return IngamePlayerSettings.Instance.playerInput.actions.FindAction(Jump);
+        }
+        public static InputAction GetCrouch()
+        {
+            return IngamePlayerSettings.Instance.playerInput.actions.FindAction(Crouch);
+        }
+    }
+    public static class Extenion
+    {
+        private const float maxDistance = 0.72f;
         public static bool CanJump(this PlayerControllerB localPlayerController, RaycastHit? ___hit = null)
         {
             bool canJump = !Physics.Raycast(localPlayerController.gameplayCamera.transform.position, Vector3.up, out RaycastHit hit,
                 maxDistance, localPlayerController.playersManager.collidersAndRoomMask, QueryTriggerInteraction.Ignore);
             ___hit = hit;
             return canJump;
-        }
-
-        public static bool ValidatePlayerState()
-        {
-            return !(__mainPlayer.inTerminalMenu || __mainPlayer.isTypingChat ||
-                     __mainPlayer.isPlayerDead || __mainPlayer.quickMenuManager.isMenuOpen);
-        }
-
-        public static InputAction GetCrouch()
-        {
-            return IngamePlayerSettings.Instance.playerInput.actions.FindAction(Crouch);
         }
     }
 }

@@ -16,6 +16,7 @@
           "Assembly-CSharp": "0.0.0.0",
           "ClientNetworkTransform": "0.0.0.0",
           "Facepunch.Steamworks.Win64": "1.0.0.0",
+          "LethalConfig": "0.0.0.0",
           "Unity.InputSystem": "1.7.0.0",
           "Unity.Netcode.Runtime": "0.0.0.0",
           "Unity.RenderPipelines.Core.Runtime": "0.0.0.0",
@@ -386,6 +387,14 @@
           }
         }
       },
+      "LethalConfig/0.0.0.0": {
+        "runtime": {
+          "LethalConfig.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
       "Unity.InputSystem/1.7.0.0": {
         "runtime": {
           "Unity.InputSystem.dll": {
@@ -511,6 +520,14 @@
           "Unity.Collections.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.0.0": {
+        "runtime": {
+          "Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.2.0"
           }
         }
       },
@@ -647,14 +664,6 @@
           "Unity.Services.Core.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "Newtonsoft.Json/13.0.0.0": {
-        "runtime": {
-          "Newtonsoft.Json.dll": {
-            "assemblyVersion": "13.0.0.0",
-            "fileVersion": "13.0.2.0"
           }
         }
       },
@@ -955,6 +964,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "LethalConfig/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Unity.InputSystem/1.7.0.0": {
       "type": "reference",
       "serviceable": false,
@@ -1031,6 +1045,11 @@
       "sha512": ""
     },
     "Unity.Collections/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Newtonsoft.Json/13.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
@@ -1116,11 +1135,6 @@
       "sha512": ""
     },
     "Unity.Services.Core/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Newtonsoft.Json/13.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

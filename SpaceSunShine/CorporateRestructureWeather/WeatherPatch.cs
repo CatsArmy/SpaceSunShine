@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Text;
 using HarmonyLib;
 using TMPro;
 
@@ -10,7 +8,7 @@ namespace CorporateRestructureWeather
     {
         [HarmonyPostfix]
         [HarmonyPatch(typeof(StartOfRound), nameof(StartOfRound.Instance.SetMapScreenInfoToCurrentLevel))]
-        private static void ColorWeather(ref TextMeshProUGUI ___screenLevelDescription, ref SelectableLevel ___currentLevel)
+        private static void ColorWeather(StartOfRound __instance, ref TextMeshProUGUI ___screenLevelDescription, ref SelectableLevel ___currentLevel)
         {
             LevelWeatherType currentWeather = ___currentLevel.currentWeather;
             StringBuilder stringBuilder = new StringBuilder();
@@ -19,7 +17,7 @@ namespace CorporateRestructureWeather
             stringBuilder.Append(___currentLevel.LevelDescription ?? "");
             ___screenLevelDescription.text = stringBuilder.ToString();
         }
-        
+
         private const string White = "FFFFFF";
         private const string Green = "69FF6B";
         private const string Yellow = "FFDC00";
@@ -44,8 +42,8 @@ namespace CorporateRestructureWeather
                     return Orange;
                 case (LevelWeatherType)5:
                     return Red;
-                
-                default: 
+
+                default:
                     return White;
             }
         }

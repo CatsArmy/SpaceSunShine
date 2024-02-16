@@ -1,32 +1,32 @@
-﻿using BepInEx;
+﻿using System.Reflection;
+using BepInEx;
 using BepInEx.Logging;
-using GameNetcodeStuff;
 using HarmonyLib;
 using UnityEngine.SceneManagement;
 
 namespace BetterCrouch
 {
 
-    [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
+    [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginMetadata.PLUGIN_VERSION)]
     public class Plugin : BaseUnityPlugin
     {
         public static Plugin Instance { get; private set; }
-        public static ManualLogSource Log = new ManualLogSource(PluginInfo.PLUGIN_NAME);
         public static Harmony harmony = new Harmony("CatsArmy.BetterCrouch");
         private const string IngameScene = "SampleSceneRelay";
-        //public static bool
+        public static ManualLogSource Log;
 
         private void Awake()
         {
             // Plugin startup logic
-            Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
-            SceneManager.sceneLoaded += OnSceneLoaded;
-            harmony.PatchAll(typeof(PlayerControllerB));
+            Logger.LogInfo($"Plugin {PluginMetadata.PLUGIN_GUID} is loaded!");
+            Log = Logger;
+            harmony.PatchAll(Assembly.GetExecutingAssembly());
+            //SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
-        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        private static void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
-            Patches.Initialized = scene.name == IngameScene;
+            //Patches.IsIngame = scene.name == IngameScene;
         }
     }
 }

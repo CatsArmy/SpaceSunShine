@@ -102,3 +102,5 @@ D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\obj\Debug\netstandar
 D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\obj\Debug\netstandard2.1\BetterCr.5DBB2E14.Up2Date
 D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\obj\Debug\netstandard2.1\BetterCrouch.dll
 D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\obj\Debug\netstandard2.1\BetterCrouch.pdb
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Debug\netstandard2.1\LethalConfig.dll
+D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Debug\netstandard2.1\LethalConfig.pdb

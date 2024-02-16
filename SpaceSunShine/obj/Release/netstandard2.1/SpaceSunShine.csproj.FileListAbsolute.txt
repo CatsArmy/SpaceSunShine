@@ -53,7 +53,6 @@ E:\Source\repos\GitHub\Forks & Clones\SpaceSunShine\SpaceSunShine\bin\Release\ne
 E:\Source\repos\GitHub\Forks & Clones\SpaceSunShine\SpaceSunShine\bin\Release\netstandard2.1\LethalConfig.pdb
 D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\bin\Release\netstandard2.1\SpaceSunShine.deps.json
 D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\bin\Release\netstandard2.1\SpaceSunShine.dll
-D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\bin\Release\netstandard2.1\SpaceSunShine.pdb
 D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\bin\Release\netstandard2.1\Assembly-CSharp.dll
 D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\bin\Release\netstandard2.1\ClientNetworkTransform.dll
 D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\bin\Release\netstandard2.1\Facepunch.Steamworks.Win64.dll
@@ -103,4 +102,3 @@ D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\obj\Release\netstandard2.1\SpaceS
 D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\obj\Release\netstandard2.1\SpaceSunShine.sourcelink.json
 D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\obj\Release\netstandard2.1\SpaceSun.EADC8EC1.Up2Date
 D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\obj\Release\netstandard2.1\SpaceSunShine.dll
-D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\obj\Release\netstandard2.1\SpaceSunShine.pdb

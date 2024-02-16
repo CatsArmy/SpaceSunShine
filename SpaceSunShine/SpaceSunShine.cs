@@ -30,14 +30,6 @@ namespace SpaceSunShine
         {
             if (scene.name != SpaceShipScene)
             {
-                ZeekerSun = null;
-                Sun = null;
-                HangarShip = null;
-                ShipModels2b = null;
-                OutsideShipRoom = null;
-                OutsideShipRoomClone = null;
-                ShipLightsPost = null;
-                ShipLightsPostClone = null;
                 return;
             }
 
@@ -87,11 +79,13 @@ namespace SpaceSunShine
             ShipLightsPostClone = GameObject.Instantiate(ShipLightsPost, ShipModels2b.transform);
             ShipLightsPostClone.transform.position = ShipLightsPost.transform.position;
             GameObject FloodLight2 = ShipLightsPostClone.transform.Find(Floodlight2).gameObject;
-            //Quaternion rotation = ShipLightsPost.transform.Find(Floodlight2).rotation;
             FloodLight2.transform.rotation = new Quaternion(0.5461f, 0.6892f, -0.4661f, -0.0976f);
             FloodLight2.transform.localEulerAngles = new Vector3(32.3982f, 229.6713f, 92.1077f);
-
             ShipLightsPostClone.SetActive(true);
+            ShipLightsPost.AddComponent<OnEvents.OnFloodlight>();
+            //Init OnEvents by making sure it was enabled at least once
+            ShipLightsPost.SetActive(!ShipLightsPost);
+            ShipLightsPost.SetActive(!ShipLightsPost);
         }
 
         private static void InitLadder()
@@ -103,6 +97,10 @@ namespace SpaceSunShine
             OutsideShipRoom = HangarShip.transform.Find(nameof(OutsideShipRoom)).gameObject;
             OutsideShipRoomClone = GameObject.Instantiate(OutsideShipRoom, HangarShip.transform);
             OutsideShipRoomClone.SetActive(true);
+            OutsideShipRoom.AddComponent<OnEvents.OnLadder>();
+            //Init OnEvents by making sure it was enabled at least once
+            OutsideShipRoom.SetActive(!OutsideShipRoom);
+            OutsideShipRoom.SetActive(!OutsideShipRoom);
         }
 
         public static Quaternion Copy(this Quaternion quat, float xOffset = 0f, float yOffset = 0f, float zOffset = 0f, float wOffset = 0f)
