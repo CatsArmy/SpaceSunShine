@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-using BepInEx;
+﻿using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
 using UnityEngine.SceneManagement;
@@ -20,7 +19,7 @@ namespace BetterCrouch
             // Plugin startup logic
             Logger.LogInfo($"Plugin {PluginMetadata.PLUGIN_GUID} is loaded!");
             Log = Logger;
-            harmony.PatchAll(Assembly.GetExecutingAssembly());
+            harmony.PatchAll();
             //SceneManager.sceneLoaded += OnSceneLoaded;
         }
 

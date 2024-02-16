@@ -53,7 +53,6 @@ E:\Source\repos\GitHub\Forks & Clones\SpaceSunShine\SpaceSunShine\BetterCrouch\o
 E:\Source\repos\GitHub\Forks & Clones\SpaceSunShine\SpaceSunShine\BetterCrouch\obj\Release\netstandard2.1\BetterCrouch.pdb
 D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\BetterCrouch.deps.json
 D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\BetterCrouch.dll
-D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\BetterCrouch.pdb
 D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Assembly-CSharp.dll
 D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\ClientNetworkTransform.dll
 D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\Facepunch.Steamworks.Win64.dll
@@ -103,4 +102,3 @@ D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\obj\Release\netstand
 D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\obj\Release\netstandard2.1\BetterCrouch.sourcelink.json
 D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\obj\Release\netstandard2.1\BetterCr.5DBB2E14.Up2Date
 D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\obj\Release\netstandard2.1\BetterCrouch.dll
-D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\obj\Release\netstandard2.1\BetterCrouch.pdb

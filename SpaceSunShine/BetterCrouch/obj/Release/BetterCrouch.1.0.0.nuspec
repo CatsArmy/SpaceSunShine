@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>BetterCrouch</id>
+    <version>1.0.0</version>
+    <authors>BetterCrouch</authors>
+    <description>A template for Lethal Company</description>
+    <repository type="git" commit="20a0bb6b90f3dc336bf85e81d52f804271c04bee" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="BepInEx.Core" version="5.4.21" exclude="Build,Analyzers" />
+        <dependency id="BepInEx.PluginInfoProps" version="1.1.0" exclude="Build,Analyzers" />
+        <dependency id="UnityEngine.Modules" version="2022.3.9" exclude="Runtime,Build,Native,Analyzers,BuildTransitive" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\source\CatsArmy\SpaceSunShine\SpaceSunShine\BetterCrouch\bin\Release\netstandard2.1\BetterCrouch.dll" target="lib\netstandard2.1\BetterCrouch.dll" />
+  </files>
+</package>
